@@ -1,0 +1,79 @@
+/* style.css */
+body {
+    background-color: #f0f4f8; /* A subtle off-white background */
+}
+
+header {
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+button {
+    transition: all 0.3s ease-in-out;
+}
+
+.shadow-xl {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade-in effect for header subtitle */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.animate-fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Pulse animation for header title */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+.animate-pulse {
+    animation: pulse 3s infinite;
+}
+
+/* Smooth transitions for all elements */
+* {
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Login Page Specific Styles */
+.bg-gray-100 {
+    background-image: url('assets/images/railway-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Centering card with a shadow for better focus */
+.shadow-xl:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Animation */
+button {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Smooth Input Field Transitions */
+input[type="text"],
+input[type="password"] {
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5);
+}
+

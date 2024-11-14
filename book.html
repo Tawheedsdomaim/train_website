@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Train</title>
+    <link rel="stylesheet" href="/frontend/assets/css/style.css">
+    <link rel="stylesheet" href="/frontend/assets/css/book.css"> <!-- Link to Tailwind CSS -->
+</head>
+<body>
+    <header>
+        <h1>Book Your Train</h1>
+    </header>
+    
+    <main>
+        <h2>Search Trains</h2>
+        
+        <!-- Search Form -->
+        <div>
+            <input type="text" id="source" placeholder="Source">
+            <input type="text" id="destination" placeholder="Destination">
+            <input type="date" id="travelDate">
+            <button id="searchBtn">Search</button>
+        </div>
+        
+        <h2>Available Trains</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Train Name</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                    <th>Available Seats</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="trainTableBody">
+                <!-- Train details will be populated here -->
+            </tbody>
+        </table>
+    </main>
+</body>
+<script src="/frontend/assets/js/book.js"></script>
+</html>

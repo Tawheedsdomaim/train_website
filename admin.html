@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="frontend/assets/css/style.css">
+    <link rel="stylesheet" href="frontend/assets/css/admin.css">
+    <!-- Font Awesome for Delete Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Logout Button -->
+    <button id="logoutButton" class="logout-button">
+        Logout
+    </button>
+
+    <div class="container mx-auto my-10 p-5 bg-white shadow-md rounded">
+        <h1 class="text-3xl font-bold mb-6 text-center">Admin Dashboard</h1>
+
+        <div class="mb-5 p-5 border rounded bg-gray-50">
+            <h2 class="text-xl font-semibold mb-4">Add New Train</h2>
+            <form id="addTrainForm" class="flex flex-wrap">
+                <input type="text" id="train_name" placeholder="Train Name" required class="border p-2 mr-2 mb-2 flex-1">
+                <input type="text" id="source" placeholder="Source" required class="border p-2 mr-2 mb-2 flex-1">
+                <input type="text" id="destination" placeholder="Destination" required class="border p-2 mr-2 mb-2 flex-1">
+                <input type="datetime-local" id="departure_time" required class="border p-2 mr-2 mb-2 flex-1">
+                <input type="datetime-local" id="arrival_time" required class="border p-2 mr-2 mb-2 flex-1">
+                <input type="number" id="total_seats" placeholder="Total Seats" required class="border p-2 mr-2 mb-2 flex-1">
+                <input type="number" id="available_seats" placeholder="Available Seats" required class="border p-2 mr-2 mb-2 flex-1">
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">Add Train</button>
+            </form>
+        </div>
+
+        <h2 class="text-xl font-semibold mb-4">Train List</h2>
+        <div class="table-container">
+            <table class="min-w-full border-collapse border border-gray-200 mb-5">
+                <thead>
+                    <tr>
+                        <th class="border-b bg-gray-200">Train Name</th>
+                        <th class="border-b bg-gray-200">Source</th>
+                        <th class="border-b bg-gray-200">Destination</th>
+                        <th class="border-b bg-gray-200">Departure</th>
+                        <th class="border-b bg-gray-200">Arrival</th>
+                        <th class="border-b bg-gray-200">Total Seats</th>
+                        <th class="border-b bg-gray-200">Available Seats</th>
+                        <th class="border-b bg-gray-200">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="trainTableBody">
+                    <!-- Train rows will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Logout Redirection Script -->
+    <script>
+        document.getElementById("logoutButton").addEventListener("click", function() {
+            // Redirect to homepage on logout
+            window.location.href = "/frontend/index.html"; // Or your desired path
+        });
+    </script>
+
+    <!-- Your Admin.js Script -->
+    <script src="/frontend/assets/js/admin.js" defer></script>
+</body>
+</html>

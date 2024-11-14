@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="/frontend/assets/css/style.css">
+    <link rel="stylesheet" href="/frontend/assets/css/booking.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto my-10 p-5 bg-white shadow-md rounded">
+        <h1 class="text-3xl font-bold mb-6 text-center">Confirm Your Booking</h1>
+
+        <!-- Display selected train information -->
+        <div id="trainInfo" class="mb-5 p-5 border rounded bg-gray-50">
+            <h2 class="text-xl font-semibold mb-4">Train Information</h2>
+            <p id="trainName"></p>
+            <p id="trainSource"></p>
+            <p id="trainDestination"></p>
+            <p id="trainDeparture"></p>
+            <p id="trainArrival"></p>
+            <p id="trainAvailableSeats"></p>
+        </div>
+
+        <!-- Booking Form -->
+        <form id="bookingForm" class="flex flex-col">
+            <input type="text" id="name" placeholder="Your Name" required class="border p-2 mb-2">
+            <input type="number" id="age" placeholder="Your Age" required class="border p-2 mb-2">
+            <input type="text" id="address" placeholder="Your Address" required class="border p-2 mb-2">
+            <input type="email" id="email" placeholder="Your Email" required class="border p-2 mb-2">
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Confirm Booking</button>
+        </form>
+        <div id="responseMessage" class="mt-4"></div>
+    </div>
+
+    <script src="/frontend/assets/js/booking.js" defer></script>
+</body>
+</html>

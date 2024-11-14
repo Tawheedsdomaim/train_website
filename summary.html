@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Summary</title>
+    <link rel="stylesheet" href="/frontend/assets/css/style.css">
+    <link rel="stylesheet" href="/frontend/assets/css/summary.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto my-10 p-5 bg-white shadow-md rounded">
+        <h1 class="text-3xl font-bold mb-6 text-center">Booking Summary</h1>
+
+        <!-- Train Information -->
+        <div id="trainInfo" class="mb-5 p-5 border rounded bg-gray-50">
+            <h2 class="text-xl font-semibold mb-4">Train Information</h2>
+            <p id="trainName"></p>
+            <p id="trainSource"></p>
+            <p id="trainDestination"></p>
+            <p id="trainDeparture"></p>
+            <p id="trainArrival"></p>
+        </div>
+
+        <!-- Ticket Information -->
+        <div id="ticketInfo" class="p-5 border rounded bg-gray-50">
+            <h2 class="text-xl font-semibold mb-4">Ticket Information</h2>
+            <p id="passengerName"></p>
+            <p id="passengerAge"></p>
+            <p id="passengerAddress"></p>
+            <p id="ticketId"></p>
+            <p id="seatNumber"></p>
+            <p id="price"></p>
+            <p id="ticketStatus"></p>
+        </div>
+    </div>
+
+    <script src="/frontend/assets/js/summary.js" defer></script>
+</body>
+</html>
